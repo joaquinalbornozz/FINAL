@@ -3,8 +3,10 @@ from turno import Turno
 from registro import Registro_de_turno
 from pago import Pago
 from datetime import date
+import gc
 
 if __name__ == '__main__':
+    gc.disable()
     s=Socio('Juan', 'Perez','2645600343',11111111,111)
     e=Entrenador('John','Ramirez','2645781020',12111111,124,'musculacion')
     t1=Turno(date(2023,9,25),'08:00','10:00',15,e)
@@ -44,4 +46,6 @@ if __name__ == '__main__':
     e.Moddatos('Resistencia')
     print('con cambios')
     e.MostrarDatos()
-        
+    c=gc.collect()
+    print(c)
+    

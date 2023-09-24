@@ -22,7 +22,7 @@ class Usuario(ABC):
         return self.__dni
     
     def get_nombre(self):
-        return self.__nombre+'\n'+self.__apellido
+        return self.__nombre+' '+self.__apellido
 
     def MostrarDatos(self):
         print (f'Nombre y apellido: {self.__nombre} {self.__apellido} \t Dni: {self.__dni} \t Telefono:{self.__telefono}')
