@@ -6,7 +6,7 @@ class Pago:
     __Codigo: int
 
     def __init__(self,pago) -> None:
-        self.__Fecha_pago = datetime.today()
+        self.__Fecha_pago = date.today()
         self.__Codigo = random()
         self.__Pago = pago
     
